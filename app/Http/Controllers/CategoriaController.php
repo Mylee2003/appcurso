@@ -55,4 +55,26 @@ class CategoriaController extends Controller
         return Redirect::route('index');
     }
 
+    public function MostrarAlterarCategoria(Categoria $id){
+       // $registrosCategoria = Categoria::;
+
+        return view('altera_categoria',['registrosCategoria' => $id]);
+
+    }
+    
+
+    public function AlterarBancoCategoria(Categoria $registrosCategoria, Request $request){
+        $registrosCat = $request->validate([
+            'nomecategoria' => 'string|required'
+            ]);
+           
+
+            //Esta linha é que altera o registro do banco 
+            //$registrosCategoria->id;
+            $registrosCategoria->save($registrosCat);
+
+        //alert("Dados alterados com sucesso");
+        return Redirect::route('index');
+    }
+
 }

@@ -23,13 +23,20 @@ Route::delete('/deletar-curso/{registrosCurso}',[CursoController::class,'Deletar
 //para ir para o cadastro da categoria 
 Route::get('/cadcategoria',[CategoriaController::class,'mostrarFormCat'])->name("form-cadastro-categoria");
 Route::post('/cadcategoria',[CategoriaController::class,'cadastroCat'])->name("cadastro-categoria");
+
 //rotas para manipular categoria
 Route::get('/manipulacategoria',[CategoriaController::class,'mostrarManipulaCategoria'])->name("manipula-categoria");
+
 //rotas para alterar categoria
-Route::get('alterar-categoria/{registrosCategoria}',[CategoriaController::class,'MostrarAlterarCategoria'])->name('alterar-categoria');
-Route::put('alterarbancocategoria/{registrosCategoria}',[CategoriaController::class,'AlterarBancoCategoria'])->name('alterar-banco-categoria');
+Route::get('alterar-categoria/{registrosCategoria}',[CategoriaController::class,'MostrarAlterarCurso'])->name('alterar-categoria');
+Route::put('alterarbancocategoria/{registrosCategoria}',[CategoriaController::class,'AlterarBancoCurso'])->name('alterar-banco-categoria');
+
 //rotas para deletar categoria
-Route::delete('/deletar-categoria/{registrosCategoria}',[CategoriaController::class,'DeletarCategoria'])->name('deletar-categoria');
+Route::delete('/deletar-categoria/{registrosCategoria}',[CategoriaController::class,'DeletarCurso'])->name('deletar-categoria');
+
+//rotas para deletar curso
+Route::delete('/cursocategoria/{registrosCurso}',[CategoriaController::class,'DeletarCurso'])->name('deletar-curso');
+
 //rotas  para buscar por nome da categoria 
 Route::get('/manipulanomecategoria', [CategoriaController::class,'BuscarCategoriaNome'])->name('buscar-categoria-nome');
 
