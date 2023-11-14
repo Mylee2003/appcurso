@@ -58,7 +58,7 @@ class CategoriaController extends Controller
     public function MostrarAlterarCategoria(Categoria $id){
        // $registrosCategoria = Categoria::;
 
-        return view('altera_categoria',['registrosCategoria' => $id]);
+        return view('altera-categoria',['registrosCategoria' => $id]);
 
     }
     

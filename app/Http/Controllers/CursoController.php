@@ -28,15 +28,43 @@ class CursoController extends Controller
     }
 
     public function cadastroCurso(Request $request){
-        $registrosCurso = $request->validate([
+        $registrosCur = $request->validate([
         'idcategoria' => 'required',
         'nomecurso' => 'string|required',
         'cargahoraria'=> 'string|required',
         'valor'=> 'string|required',
         ]);
 
-        Curso::create($registrosCurso);
+        Curso::create($registrosCur);
 
         return Redirect::route('index');
     }
+
+
+    public function AlterarBancoCurso(Curso $registrosCurso, Request $request){
+        $registrosCur = $request->validate([
+            'idcategoria' => 'required',
+            'nomecurso' => 'string|required',
+            'cargahoraria'=> 'string|required',
+            'valor'=> 'string|required',
+            ]);
+           
+    
+            //Esta linha é que altera o registro do banco 
+            //$registrosAula->id;
+            $registrosCurso->save($registrosCur);
+    
+        //alert("Dados alterados com sucesso");
+        return Redirect::route('index');
+    }
+    
+    
+    
+    
+    public function MostrarAlterarCurso(Curso $id){
+     
+    
+         return view('alterar-curso',['registrosCurso' => $id]);
+    
+     }
 }

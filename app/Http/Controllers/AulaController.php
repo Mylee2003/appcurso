@@ -29,14 +29,42 @@ class AulaController extends Controller
     }
 
     public function cadastroAula(Request $request){
-        $registrosAula = $request->validate([
+        $registrosAul = $request->validate([
         'idcurso' => 'required',
         'tituloaula' => 'string|required',
         'urlaula'=> 'string|required',
         ]);
 
-        Aula::create($registrosAula);
+        Aula::create($registrosAul);
 
         return Redirect::route('index');
     }
+
+
+public function AlterarBancoAula(Aula $registrosAula, Request $request){
+    $registrosAul = $request->validate([
+        'idcurso' => 'required',
+        'tituloaula' => 'string|required',
+        'urlaula'=> 'string|required',
+        ]);
+       
+
+        //Esta linha é que altera o registro do banco 
+        //$registrosAula->id;
+        $registrosAula->save($registrosAul);
+
+    //alert("Dados alterados com sucesso");
+    return Redirect::route('index');
+}
+
+
+
+
+public function MostrarAlterarAula(Aula $id){
+ 
+
+     return view('alterar-aula',['registrosAula' => $id]);
+
+ }
+
 }
