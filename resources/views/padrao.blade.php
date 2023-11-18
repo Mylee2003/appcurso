@@ -5,16 +5,16 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon" />
+  <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon" />
   <title>PlainAdmin Demo | Bootstrap 5 Admin Template</title>
 
   <!-- ========== All CSS files linkup ========= -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/lineicons.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="assets/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="assets/css/fullcalendar.css" />
-  <link rel="stylesheet" href="assets/css/fullcalendar.css" />
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/css/lineicons.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/fullcalendar.css" />
+  <link rel="stylesheet" href="../assets/css/fullcalendar.css" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
 </head>
 
 <body>
@@ -28,7 +28,7 @@
   <aside class="sidebar-nav-wrapper">
     <div class="navbar-logo">
       <a href="{{route('index')}}">
-        <img src="assets/images/logo/logo.svg" alt="logo" />
+        <img src="../assets/images/logo/logo.svg" alt="logo" />
       </a>
     </div>
     <nav class="sidebar-nav">
@@ -166,7 +166,7 @@
                   <li>
                     <a href="#0">
                       <div class="image">
-                        <img src="assets/images/lead/lead-6.png" alt="" />
+                        <img src="../assets/images/lead/lead-6.png" alt="" />
                       </div>
                       <div class="content">
                         <h6>
@@ -186,7 +186,7 @@
                   <li>
                     <a href="#0">
                       <div class="image">
-                        <img src="assets/images/lead/lead-1.png" alt="" />
+                        <img src="../assets/images/lead/lead-1.png" alt="" />
                       </div>
                       <div class="content">
                         <h6>
@@ -219,7 +219,7 @@
                   <li>
                     <a href="#0">
                       <div class="image">
-                        <img src="assets/images/lead/lead-5.png" alt="" />
+                        <img src="../assets/images/lead/lead-5.png" alt="" />
                       </div>
                       <div class="content">
                         <h6>Jacob Jones</h6>
@@ -231,7 +231,7 @@
                   <li>
                     <a href="#0">
                       <div class="image">
-                        <img src="assets/images/lead/lead-3.png" alt="" />
+                        <img src="../assets/images/lead/lead-3.png" alt="" />
                       </div>
                       <div class="content">
                         <h6>John Doe</h6>
@@ -243,7 +243,7 @@
                   <li>
                     <a href="#0">
                       <div class="image">
-                        <img src="assets/images/lead/lead-2.png" alt="" />
+                        <img src="../assets/images/lead/lead-2.png" alt="" />
                       </div>
                       <div class="content">
                         <h6>Anee Lee</h6>
@@ -261,7 +261,7 @@
                   <div class="profile-info">
                     <div class="info">
                       <div class="image">
-                        <img src="assets/images/profile/profile-image.png" alt="" />
+                        <img src="../assets/images/profile/profile-image.png" alt="" />
                       </div>
                       <div>
                         <h6 class="fw-500">Adam Joe</h6>
@@ -274,7 +274,7 @@
                   <li>
                     <div class="author-info flex items-center !p-1">
                       <div class="image">
-                        <img src="assets/images/profile/profile-image.png" alt="image">
+                        <img src="../assets/images/profile/profile-image.png" alt="image">
                       </div>
                       <div class="content">
                         <h4 class="text-sm">Adam Joe</h4>
@@ -347,12 +347,12 @@
     <!-- ========== footer end =========== -->
 
     <!-- ========= All Javascript files linkup ======== -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/Chart.min.js"></script>
-    <script src="assets/js/dynamic-pie-chart.js"></script>
-    <script src="assets/js/moment.min.js"></script>
-    <script src="assets/js/fullcalendar.js"></script>
-    <script src="assets/js/jvectormap.min.js"></script>
-    <script src="assets/js/world-merc.js"></script>
-    <script src="assets/js/polyfill.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/Chart.min.js"></script>
+    <script src="../assets/js/dynamic-pie-chart.js"></script>
+    <script src="../assets/js/moment.min.js"></script>
+    <script src="../assets/js/fullcalendar.js"></script>
+    <script src="../assets/js/jvectormap.min.js"></script>
+    <script src="../assets/js/world-merc.js"></script>
+    <script src="../assets/js/polyfill.js"></script>
+    <script src="../assets/js/main.js"></script>

@@ -24,7 +24,7 @@ class CursoController extends Controller
     }
     public function DeletarCurso(Curso $registrosCurso){
         $registrosCurso->delete();
-        return Redirect::route('manipula-curso');
+        return Redirect::route('manipula_curso');
     }
 
     public function cadastroCurso(Request $request){
@@ -51,8 +51,8 @@ class CursoController extends Controller
            
     
             //Esta linha é que altera o registro do banco 
-            //$registrosAula->id;
-            $registrosCurso->save($registrosCur);
+            $registrosCurso->fill($registrosCur);
+            $registrosCurso->save();
     
         //alert("Dados alterados com sucesso");
         return Redirect::route('index');
@@ -61,10 +61,29 @@ class CursoController extends Controller
     
     
     
-    public function MostrarAlterarCurso(Curso $id){
+    public function MostrarAlterarCurso(Curso $registrosCurso){
      
     
-         return view('alterar-curso',['registrosCurso' => $id]);
+         return view('altera_curso',['registrosCurso' => $registrosCurso]);
     
      }
+
+
+//buscar
+public function BuscarCursoNome(Request $request){
+
+    $registrosCurso= Curso::query();
+ 
+    $registrosCurso->when($request->categoria,function($query,$valor)
+    {
+        $query->where('nomecurso','like','%'.$valor.'%');
+        $query->where('idcategoria','like','%'.$valor.'%');
+        $query->where('cargahoraria','like','%'.$valor.'%');
+        $query->where('valor','like','%'.$valor.'%');
+    });
+
+    $registrosCurso = $registrosCurso->get();
+    return view('buscar-curso-nome',['registrosCurso' => $registrosCurso]);
+
+}
 }

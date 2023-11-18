@@ -25,7 +25,7 @@
                       @csrf
                     <label class="fs-4">Aula</label>
                     
-                      <input type="text" name="tituloaula" value="{{registrosAula->tituloaula}}"  />
+                      <input type="text" name="tituloaula" value="{{$registrosAula->tituloaula}}"  />
                     
                   </div>
                   <div class="col-auto">

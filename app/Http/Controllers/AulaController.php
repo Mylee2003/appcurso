@@ -63,7 +63,7 @@ public function AlterarBancoAula(Aula $registrosAula, Request $request){
 public function MostrarAlterarAula(Aula $id){
  
 
-     return view('alterar-aula',['registrosAula' => $id]);
+     return view('alterar_aula',['registrosAula' => $id]);
 
  }
 

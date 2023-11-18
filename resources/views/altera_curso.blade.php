@@ -24,8 +24,10 @@
                       @method('put')
                       @csrf
                     <label class="fs-4">Curso</label>
-                    
-                      <input type="text" name="nomecurso" value="{{registrosCurso->nomecurso}}"  />
+                    <input type="text" name="idcategoria" value="{{$registrosCurso->idcategoria}}"  />
+                      <input type="text" name="nomecurso" value="{{$registrosCurso->nomecurso}}"  />
+                      <input type="text" name="cargahoraria" value="{{$registrosCurso->cargahoraria}}"  />
+                      <input type="text" name="valor" value="{{$registrosCurso->valor}}"  />
                     
                   </div>
                   <div class="col-auto">

@@ -17,11 +17,15 @@ Route::post('/cadcurso',[CursoController::class,'cadastroCurso'])->name("cadastr
 //rotas para manipular curso
 Route::get('/manipulacurso',[CursoController::class,'mostrarManipulaCurso'])->name("manipula-curso");
 //rotas para alterar curso
-Route::get('alterar-curso/{registrosCurso}',[CursoController::class,'MostrarAlterarCurso'])->name('alterar-curso');
+Route::get('altera-curso/{registrosCurso}',[CursoController::class,'MostrarAlterarCurso'])->name('altera-curso');
 Route::put('alterar-banco-curso/{registrosCurso}',[CursoController::class,'AlterarBancoCurso'])->name('alterar-banco-curso');
 
 //rotas para deletar curso
 Route::delete('/deletar-curso/{registrosCurso}',[CursoController::class,'DeletarCurso'])->name('deletar-curso');
+
+
+//rotas  para buscar por nome do curso
+Route::get('/manipulanomecurso', [CursoController::class,'BuscarCursoNome'])->name('buscar-curso-nome');
 //rotas para deletar curso
 //Route::delete('/cursocategoria/{registrosCurso}',[CategoriaController::class,'DeletarCurso'])->name('deletar-curso');
 
@@ -37,7 +41,7 @@ Route::get('/manipulacategoria',[CategoriaController::class,'mostrarManipulaCate
 
 //rotas para alterar categoria
 Route::get('alterar-categoria/{registrosCategoria}',[CategoriaController::class,'MostrarAlterarCategoria'])->name('alterar-categoria');
-Route::put('alterarbancocategoria/{registrosCategoria}',[CategoriaController::class,'AlterarBancoCategoria'])->name('alterar-banco-categoria');
+Route::put('alterar-banco-categoria/{registrosCategoria}',[CategoriaController::class,'AlterarBancoCategoria'])->name('alterar-banco-categoria');
 
 //rotas para deletar categoria
 Route::delete('/deletar-categoria/{registrosCategoria}',[CategoriaController::class,'DeletarCurso'])->name('deletar-categoria');
@@ -61,3 +65,6 @@ Route::put('alterar-banco-aula/{registrosAula}',[AulaController::class,'AlterarB
 Route::get('alterar-aula/{registrosAula}',[AulaController::class,'MostrarAlterarAula'])->name('alterar-aula');
 //rotas para deletar aula
 Route::delete('/deletar-aula/{registrosAula}',[AulaController::class,'DeletarAula'])->name('deletar-aula');
+
+//buscar 
+//Route::get('/manipulanomecurso', [CategoriaController::class,'BuscarCursoNome'])->name('buscar-curso-nome');

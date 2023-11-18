@@ -35,9 +35,10 @@ class CategoriaController extends Controller
     public function BuscarCategoriaNome(Request $request){
 
         $registrosCategoria= Categoria::query();
+      //  dd($registrosCategoria);
         $registrosCategoria->when($request->categoria,function($query,$valor)
         {
-            $query->where('categoria','like','%',$valor,'%');
+            $query->where('nomecategoria','like','%'.$valor.'%');
         });
 
         $registrosCategoria = $registrosCategoria->get();
@@ -55,10 +56,10 @@ class CategoriaController extends Controller
         return Redirect::route('index');
     }
 
-    public function MostrarAlterarCategoria(Categoria $id){
+    public function MostrarAlterarCategoria(Categoria $registrosCategoria){
        // $registrosCategoria = Categoria::;
 
-        return view('altera-categoria',['registrosCategoria' => $id]);
+        return view('alterar_categoria',['registrosCategoria' => $registrosCategoria]);
 
     }
     
@@ -70,8 +71,9 @@ class CategoriaController extends Controller
            
 
             //Esta linha é que altera o registro do banco 
-            //$registrosCategoria->id;
-            $registrosCategoria->save($registrosCat);
+           
+             $registrosCategoria->fill($registrosCat);
+            $registrosCategoria->save();
 
         //alert("Dados alterados com sucesso");
         return Redirect::route('index');

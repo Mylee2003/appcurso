@@ -25,7 +25,7 @@
                       @csrf
                     <label class="fs-4">Categoria</label>
                     
-                      <input type="text" name="nomecategoria" value="{{registrosCategoria->nomecategoria}}"  />
+                      <input type="text" name="nomecategoria" value="{{$registrosCategoria->nomecategoria}}"  />
                     
                   </div>
                   <div class="col-auto">
